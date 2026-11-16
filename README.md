@@ -25,4 +25,5 @@ I recommend having creating a task to automatically start AutoIPBan when your se
 + Actions - Click "New..." and select "Start a program" in the drop-down menu, Program/Script = powershell.exe then Add arguments = -NoProfile -ExecutionPolicy Bypass -STA -File "C:\ProgramData\AutoIPBan\AutoIPBan.ps1" and Start in = C:\ProgramData\AutoIPBan
 + Conditions - All blank don't change
 + Settings - All of these should be checked: Allow task to be run on demand, Run task as soon as possible after a scheduled start is missed, If the task fails, restart every 1 minute up to 3 times, If the running task does not end when requested, force it to stop
+
 Once the task is made you can start and stop the program easily from here by clicking "Run" and "End" in Task Scheduler
