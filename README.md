@@ -17,3 +17,11 @@ Open PowerShell as Administrator and launch AutoIPBan by typing:
 
 ## Settings
 <img width="366" height="433" alt="image" src="https://github.com/user-attachments/assets/beea0f00-8c6b-4c96-9161-7a3c48ab22c1" />
+
+## Task Scheduler
+I recommend having creating a task to automatically start AutoIPBan when your server launches. Open "Task Scheduler" on your Windows Server and click "Create Task..." and input the follow settings:
++ General - Name = AutoIPBan and click "Run with highest privileges"
++ Triggers - Click "New..." and select "At startup" in the drop-down menu, Enabled is checked by default click OK
++ Actions - Click "New..." and select "Start a program" in the drop-down menu, Program/Script = powershell.exe then Add arguments = -NoProfile -ExecutionPolicy Bypass -STA -File "C:\ProgramData\AutoIPBan\AutoIPBan.ps1" and Start in = C:\ProgramData\AutoIPBan
++ Conditions - All blank don't change
++ Settings - All of these should be checked: Allow task to be run on demand, Run task as soon as possible after a scheduled start is missed, If the task fails, restart every 1 minute up to 3 times, If the running task does not end when requested, force it to stop
