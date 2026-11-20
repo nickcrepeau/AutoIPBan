@@ -18,6 +18,10 @@ Open PowerShell as Administrator and launch AutoIPBan by typing:
 ## Settings
 <img width="366" height="433" alt="image" src="https://github.com/user-attachments/assets/beea0f00-8c6b-4c96-9161-7a3c48ab22c1" />
 
+## Trusted IPs
+Open C:\ProgramData\AutoIPBan\AutoIPBan.ps1 with Notepad++ or another similar application. Find this line: <b>$TrustedIPs = @(</b>  
+Then add any IP addresses here that should be permanently whitelisted. Any that are added to TrustedIPs cannot be removed from the whitelist and will have a * next to them in the running program.
+
 ## Task Scheduler
 I recommend having creating a task to automatically start AutoIPBan when your server launches. Open "Task Scheduler" on your Windows Server and click "Create Task..." and input the follow settings:
 + General - Name = AutoIPBan and click "Run with highest privileges"
