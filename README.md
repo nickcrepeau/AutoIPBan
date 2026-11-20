@@ -22,6 +22,9 @@ Open PowerShell as Administrator and launch AutoIPBan by typing:
 Open C:\ProgramData\AutoIPBan\AutoIPBan.ps1 with Notepad++ or another similar application. Find this line: <b>$TrustedIPs = @(</b>  
 Then add any IP addresses here that should be permanently whitelisted. Any that are added to TrustedIPs cannot be removed from the whitelist and will have a * next to them in the running program.
 
+## Import/Export Lists
+The program has the ability to export/import it's current whitelist and ban list. Click the Export Lists button to export the current list to a .json file. From here, copy the file to another server and click the Import Lists button to import the new data. The lists are merged, it will never remove anything!
+
 ## Task Scheduler
 I recommend having creating a task to automatically start AutoIPBan when your server launches. Open "Task Scheduler" on your Windows Server and click "Create Task..." and input the follow settings:
 + General - Name = AutoIPBan and click "Run with highest privileges"
